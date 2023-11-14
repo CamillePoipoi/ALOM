@@ -8,11 +8,11 @@
 		<version>2.7.17</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>alom.server</groupId>
-	<artifactId>chat</artifactId>
+	<groupId>fr.alom</groupId>
+	<artifactId>retour</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>chat</name>
-	<description>Demo project for Spring Boot</description>
+	<name>retour</name>
+	<description>Retour interface </description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

@@ -1,10 +1,10 @@
-package alom.server.chat;
+package fr.alom.retour;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ChatApplicationTests {
+class RetourApplicationTests {
 
 	@Test
 	void contextLoads() {
