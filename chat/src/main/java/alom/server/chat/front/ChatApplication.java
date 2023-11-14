@@ -1,4 +1,4 @@
-package alom.server.chat;
+package alom.server.chat.front;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
