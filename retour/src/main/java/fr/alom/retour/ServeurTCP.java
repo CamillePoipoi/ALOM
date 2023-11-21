@@ -21,8 +21,8 @@ public class ServeurTCP {
 
                 // Créer un objet ConnexionClient pour gérer la connexion
                 ConnexionClient connexionClient = new ConnexionClient(clientSocket);
-                String token = connexionClient.getTokenFromClient(); // Récupérer le token du client
-                connexions.put(connexionClient, token); // Associer la connexion à un token dans la HashMap
+                //String token = connexionClient.getTokenFromClient(); // Récupérer le token du client
+                connexions.put(connexionClient, "token"); // Associer la connexion à un token dans la HashMap
 
                 connexionClient.start(); // Démarrer le traitement de la connexion dans un nouveau thread
             }

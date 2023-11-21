@@ -1,24 +1,43 @@
 package fr.alom.retour;
 
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.PrintStream;
 import java.net.Socket;
 import java.util.Scanner;
 
 public class ConnexionClient extends Thread {
     private Socket socket;
     private String token;
+    private PrintStream ps;
 
     public ConnexionClient(Socket socket) {
         this.socket = socket;
-        this.token = getTokenFromClient();
+        try {
+            ps = new PrintStream(socket.getOutputStream(),true);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
     String getTokenFromClient() {
-        System.out.println("Veuillez entrer votre token : ");
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine();
+        //System.out.println("Veuillez entrer votre token : ");
+       
+        ps.println("entrez le token");
+            
+        Scanner scanner;
+        try {
+            scanner = new Scanner(socket.getInputStream());
+            return scanner.nextLine();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public void run() {
@@ -26,6 +45,9 @@ public class ConnexionClient extends Thread {
             // Traitement à effectuer lors de la réception d'un message sur cette socket
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             String message;
+            this.token = getTokenFromClient();
+
+            ps.println(token);
             while ((message = in.readLine()) != null) {
                 System.out.println("Message reçu de " + token + " : " + message);
             }
