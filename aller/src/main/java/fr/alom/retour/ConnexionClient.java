@@ -19,14 +19,11 @@ public class ConnexionClient extends Thread {
         try {
             ps = new PrintStream(socket.getOutputStream(),true);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
-    String getTokenFromClient() {
-        //System.out.println("Veuillez entrer votre token : ");
-       
+    String getTokenFromClient() {       
         ps.println("entrez le token");
             
         Scanner scanner;
@@ -34,7 +31,6 @@ public class ConnexionClient extends Thread {
             scanner = new Scanner(socket.getInputStream());
             return scanner.nextLine();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return null;
