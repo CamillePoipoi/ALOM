@@ -1,37 +1,25 @@
 package fr.alom.auth.middle;
 
 import fr.alom.auth.back.AuthRepository;
-import fr.alom.auth.model.User;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
+import java.util.UUID;
+
 public class AuthService {
 
-    private final AuthRepository authRepository;
-    @Autowired
-    public AuthService(AuthRepository authRepository) {
-        this.authRepository = authRepository;
-    }
+    private final AuthRepository authRepository = AuthRepository.getInstance();
 
     public String authenticate(String nickname, String password) throws Exception {
         if(!isValidCredentials(nickname, password)) {
-            throw new Exception();
+            throw new Exception("CREDENTIALS INVALIDE APPAREMMENT !");
         }
-        return generateToken(nickname);
+        return generateToken();
     }
 
     private boolean isValidCredentials(String nickname, String password) {
-        User user = authRepository.findByNicknameAndPassword(nickname, password);
-        return user != null;
+        return authRepository.credentialMatches(nickname, password);
     }
 
-    public static String generateToken(String subject) {
-        return Jwts.builder()
-                .subject(subject)
-                .signWith(SignatureAlgorithm.HS256, "LA-MIAGE-CEST-LE-PARTAGE")
-                .compact();
+    public static String generateToken() {
+        return UUID.randomUUID().toString();
     }
 }
