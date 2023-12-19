@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3b9a2f4-c06b-4712-a550-42bfd92631e9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../aller/src/main/java/fr/alom/retour/ConnexionClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aller/src/main/java/fr/alom/aller/ConnexionClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aller/src/main/java/fr/alom/retour/RetourApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aller/src/main/java/fr/alom/aller/AllerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aller/src/main/java/fr/alom/retour/ServeurTCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aller/src/main/java/fr/alom/aller/ServeurTCP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_old_retour/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_old_retour/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_old_retour/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_old_retour/target/classes/fr/alom/MyResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old_retour/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old_retour/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old_retour/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old_retour/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old_retour/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old_retour/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old_retour/src/main/java/fr/alom/retour/RetourApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old_retour/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old_retour/src/test/java/fr/alom/retour/RetourApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +40,16 @@
     "Application.ServeurTCP.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< Updated upstream
     "git-widget-placeholder": "aller",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/camil/Documents/Cours/new_projects/aller",
+=======
+    "git-widget-placeholder": "retour",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/camil/Documents/Cours/ALOM/ALOM",
+>>>>>>> Stashed changes
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -74,6 +91,10 @@
       <updated>1702926946047</updated>
       <workItem from="1702926947097" duration="141000" />
       <workItem from="1702932663006" duration="33000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1702977602907" duration="32000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
